@@ -1,23 +1,23 @@
-let painting  = Painterro({
-  id: "paint",
-  colorScheme: {
-    main: '#39b7c2', // make panels light-yellow
-    control: '#153570', // change controls color
-    controlContent: "#FFFFFF",
-    backgroundColor: "#FFFFFF"
-  },
-  saveHandler: function (image, done) {
-    // of course, instead of raw XHR you can use fetch, jQuery, etc
+// let painting  = Painterro({
+//   id: "paint",
+//   colorScheme: {
+//     main: '#39b7c2', // make panels light-yellow
+//     control: '#153570', // change controls color
+//     controlContent: "#FFFFFF",
+//     backgroundColor: "#FFFFFF"
+//   },
+//   saveHandler: function (image, done) {
+//     // of course, instead of raw XHR you can use fetch, jQuery, etc
     
-    console.log(image);
-    localStorage.image = image.asDataURL();
-    done(false);
+//     console.log(image);
+//     localStorage.image = image.asDataURL();
+//     done(false);
 
-  }
-});
+//   }
+// });
 
 
-painting.show(localStorage.image);
+// painting.show(localStorage.image);
 
 
 
@@ -87,7 +87,7 @@ setInterval(save, 5*1000);
 function save() {
     //console.log('Saving changes', change);
     
-    painting.save();
+    // painting.save();
     for(let quill of quills){
       localStorage[quill.container.id] = JSON.stringify(quill.getContents());
     }
