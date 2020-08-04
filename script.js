@@ -73,10 +73,11 @@ $(".notes").each((i, el)=>{
   });
 
   try{
-    quill.setContents(JSON.parse(localStorage[quill.id]));
+    quill.setContents(JSON.parse(localStorage[quill.container.id]));
   }
   catch{
   }
+  quills.push(quill);
 });
 
 
